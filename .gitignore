@@ -1,0 +1,14 @@
+*~
+*.patch
+*.pyc
+*.swo
+*.swp
+build
+dist
+MANIFEST
+Makefile
+version.txt
+locale/*.mo
+*.xhtml.fr
+*.xml.fr
+docs/_build/

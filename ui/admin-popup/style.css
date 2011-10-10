@@ -1,0 +1,106 @@
+.clear {
+  clear: both;
+}
+
+body{
+  padding: 10px;
+}
+
+p {
+  font-size: 11px;
+}
+
+td {
+  vertical-align: top;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+h1 {
+  float: left;
+  text-decoration: none;
+  padding: 5px;
+  border-radius-topleft: 5px;
+  border-radius-topright: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-radius-topleft: 5px;
+  -webkit-border-radius-topright: 5px;
+  margin: 0px;
+  color: #FFF;
+  background-color: #333;
+  border:1px solid #CCCCCC;
+  box-shadow:0 0 3px #CCCCCC;
+  -moz-box-shadow:0 0 3px #CCCCCC;
+  -webkit-box-shadow:0 0 3px #CCCCCC;
+}
+
+a {
+  color: #333;
+}
+
+#browse-list td a {
+    color: #333333;
+    text-decoration: underline;
+}
+
+/* Forms look */
+input, textarea, select {
+  border: 1px solid gray;
+  padding: 2px;
+}
+
+button, .button {
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+  -moz-box-shadow:0 0 3px #CCCCCC;
+  -webkit-box-shadow:0 0 3px #CCCCCC;
+  box-shadow:0 0 3px #CCCCCC;
+
+  background-color: #FFF;
+  border:1px solid #CCCCCC;
+  cursor: pointer;
+  padding: 5px;
+  background-position: 5px 5px;
+  background-repeat: no-repeat;
+  padding-left: 24px !important;
+  text-decoration: none;
+}
+
+button.button-selector {
+  /* Do not force padding left to selector button */
+  padding-left: 5px !important;
+}
+
+button:hover, button:focus {
+  -moz-box-shadow:0 0 3px #999999;
+  -webkit-box-shadow:0 0 3px #999999;
+}
+
+fieldset {
+  background-color: #F9F9F9;
+  border: 1px solid #DDDDDD;
+}
+
+fieldset legend {
+  padding: 3px 0px;
+  color: #333333;
+}
+
+/* Fixes */
+body#admin-popup .ms2side__div select {
+  width: 200px;
+}
+
+#message div * {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.context-menu {
+  width: 270px;
+}

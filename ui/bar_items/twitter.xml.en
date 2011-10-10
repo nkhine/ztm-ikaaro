@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<stl:block xmlns="http://www.w3.org/1999/xhtml"
+           xmlns:stl="http://www.hforge.org/xml-namespaces/stl">
+
+  <h3 class="title">
+    <a href="${title_href}" title="${title}">${title}</a>
+  </h3>
+
+  <stl:block stl:if="errors">
+    <div class="errors">
+      <p>An error occured, the tweets have not been updated.
+         <a onclick="$(this).parents('div.errors').children('ul').show();">See errors</a>
+       </p>
+      <ul style="display: none;">
+        <li stl:repeat="error errors">${error}</li>
+      </ul>
+    </div>
+  </stl:block>
+  <ul stl:if="items">
+    <li stl:repeat="item items">${item}</li>
+  </ul>
+
+</stl:block>

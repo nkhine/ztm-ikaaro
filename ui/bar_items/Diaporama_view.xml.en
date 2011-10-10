@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<stl:block xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:stl="http://www.hforge.org/xml-namespaces/stl">
+
+  <h3 stl:if="title" class="title">${title}</h3>
+
+  <div stl:if="not banners">
+    No banner to show, please configure it.
+  </div>
+
+  <div class="slider-itws"
+       style="width:${width}px;height:${height}px;background:url('${first_img/path}') no-repeat;" stl:if="banners">
+    <a class="slider-link" href="${first_img/link}" style="width:${width}px;height:${height}px;"
+       target="${first_img/target}">
+      <a href="${banner/img_link}" title="${banner/title}"
+         target="${banner/target}" class="slider-elt" rel="itws-slide" stl:repeat="banner banners">
+        <img src="${banner/img_path}" alt="${banner/description}" title="${banner/title}"/>
+      </a>
+      <div class="slider-itws-nav">
+        <a class="slider-itws-nav-previous previous"></a>
+        <a class="slider-itws-nav-next next"></a>
+      </div>
+    </a>
+    <div class="slider-itws-caption">
+      <span>${first_img/title}</span>
+      <p>${first_img/description}</p>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+  $(window).load(function() {
+      $('.slider-itws').SliderITWS({width: ${width}, height: ${height}});
+  });
+  </script>
+
+</stl:block>

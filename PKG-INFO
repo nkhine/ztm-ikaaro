@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: itws
+Version: 1.2.0-b1
+Summary: UNKNOWN
+Home-page: http://www.hforge.org/itws
+Author: Henry Obein
+Author-email: henry@itaapy.com
+License: GNU General Public License (GPL)
+Description: ITWS allows you to deploy and maintain, in an easy way,
+        multiple websites.
+Platform: UNKNOWN

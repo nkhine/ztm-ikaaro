@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<stl:block xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:stl="http://www.hforge.org/xml-namespaces/stl">
+
+  <div class="item ${item/css}" stl:repeat="item items">
+    <div class="item-title">
+      <a href="${item/link}" title="${item/long_title}">${item/long_title}</a>
+    </div>
+  </div>
+</stl:block>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<stl:block xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:stl="http://www.hforge.org/xml-namespaces/stl">
+
+  <style>
+    .box {
+      width: 128px;
+      height: 128px;
+      float: left;
+      text-align: center;
+      border-top: 1px dashed gray;
+      margin: 0 0 2px 0;
+    }
+    .box table {
+      width: 128px;
+      height: 128px;
+    }
+    .ligne1 {
+      width: 56px;
+      height: 56px;
+      vertical-align: middle;
+    }
+    .ligne1 a {
+      text-decoration: none;
+    }
+    .ligne2 span {
+      display: block;
+      width: 128px;
+      overflow: hidden;
+    }
+    .box table td {
+      text-align: center;
+      font-size: 9px;
+    }
+  </style>
+
+  <div class="clear"/>
+
+  <form id="form-sort-by" method="GET">
+    <input value="${target}" name="target" type="hidden" />
+    <input value="${target_id}" name="target_id" type="hidden" />
+    <input id="mode" type="hidden" name="mode" value="${mode}" />
+    ${sort_by}
+    ${reverse}
+    <button value="filter" name="filter" class="button-ok">Ok</button>
+  </form>
+
+  <div class="clear"/>
+
+  <form action="" method="post" name="browse_list" id="form-table">
+
+    <div stl:repeat="item items" class="box">
+        <table cellpadding="0" cellspacing="0">
+          <tr>
+            <td class="ligne1">
+              <a href="${item/link}" stl:omit-tag="not item/link">
+                <img src="${item/image}/;thumb?width=64&amp;height=64"
+                  title="${item/title}" stl:if="item/is_image"/>
+                <img src="${item/class_icon48}"
+                  title="${item/title}" stl:if="not item/is_image"/>
+                <br/>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a onclick="javascript:select_element('image', '${item/js_link}','')"
+                stl:if="item/is_selectable">
+                <img src="/ui/icons/16x16/add.png"/>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="ligne2">
+              <a href="${item/link}" stl:omit-tag="not item/link">
+                <span title="${item/title}">
+                  ${item/title}
+                </span>
+              </a>
+              ${item/workflow_state}
+            </td>
+          </tr>
+        </table>
+    </div>
+
+  </form>
+
+</stl:block>

@@ -1,0 +1,387 @@
+/**************************************************************************
+ * Readonly website *
+ **************************************************************************/
+body.readonly {
+  background-color: #a00;
+ }
+
+/**************************************************************************
+ * BO Link *
+ **************************************************************************/
+.broken {
+  color: red;
+}
+
+/* Workflow */
+.wf-private {
+  color: #c00 !important;
+  font-weight: bold;
+}
+
+.wf-pending {
+  color: #f57900 !important;
+  font-weight: bold;
+}
+
+.wf-public {
+  color: #4e9a06 !important;
+  font-weight: bold;
+}
+
+#content .document .reference.nowiki:link,
+#content .document .reference.nowiki:visited {
+  color: red;
+}
+
+/**************************************************************************
+ * Tag Cloud
+ **************************************************************************/
+#tag-cloud {
+  padding: 2px;
+  line-height: 3em;
+  text-align: center;
+  font-size: 7px;
+  margin: 0;
+}
+
+#tag-cloud li {
+  display: inline;
+  margin-left: 10px;
+}
+
+#tag-cloud a {
+  padding: 0px;
+  text-decoration: none;
+}
+
+#tag-cloud .tag-10 a {
+  font-size: 0.7em;
+  font-weight: 100;
+}
+
+#tag-cloud .tag-9 a {
+  font-size: 0.8em;
+  font-weight: 200;
+}
+
+#tag-cloud .tag-8 a {
+  font-size: 0.9em;
+  font-weight: 300;
+}
+
+#tag-cloud .tag-7 a {
+  font-size: 1.0em;
+  font-weight: 400;
+}
+
+#tag-cloud .tag-6 a {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+#tag-cloud .tag-5 a {
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+#tag-cloud .tag-4 a {
+  font-size: 1.6em;
+  font-weight: 700;
+}
+
+#tag-cloud .tag-3 a {
+  font-size: 1.8em;
+  font-weight: 800;
+}
+
+#tag-cloud .tag-2 a {
+  font-size: 2.2em;
+  font-weight: 900;
+}
+
+#tag-cloud .tag-1 a {
+  font-size: 2.5em;
+  font-weight: 900;
+}
+
+/*
+ * TAG VIEW
+ */
+.tag-view .item {
+  border-bottom: 1px dotted #999;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.tag-view .item .pub-datetime {
+  float: left;
+  padding-right: 8px;
+}
+
+.tag-view .item .tag {
+  float: left;
+}
+
+.tag-view .item .image-link {
+  float: left;
+  padding: 0 5px 5px 0;
+}
+
+.tag-view .item h3.title {
+  clear: both;
+  border: none;
+  margin-right: 0;
+}
+
+.tag-view .item h3.title a {
+  text-decoration: none;
+}
+
+.tag-view .item .more {
+  float: right;
+  margin-top: 10px;
+}
+
+
+/**************************************************************************
+ * MANAGE VIEW
+ * ***********************************************************************/
+.manage-ul {
+  padding: 0;
+  margin: 0;
+  width: 40%;
+}
+
+.manage-ul.left {
+  float: left;
+}
+
+.manage-ul.right {
+  float: right;
+  margin-left: 5%;
+}
+
+.manage-ul li {
+  list-style: none;
+  padding: 2px 0 2px;
+}
+
+.manage-ul li img {
+  background: url('/ui/common/icons/16x16/sprites.png') top left no-repeat;
+  width: 16px;
+  height: 16px;
+  vertical-align: bottom;
+}
+
+/* disable */
+.manage-ul li.disable span {
+  color: #888A85;
+}
+
+/* children */
+.manage-ul li.child {
+  margin-left: 24px;
+}
+
+.manage-ul .edit img,
+.manage-ul .tags img,
+.manage-ul .robotstxt img,
+.manage-ul .edit img {
+  background-position: -20px -468px;
+}
+
+.manage-ul .menu img,
+.manage-ul .footer img,
+.manage-ul .turning-footer img,
+.manage-ul .controlpanel img {
+  background-position: -20px -432px;
+}
+
+.manage-ul .manage-404 img {
+  background-position: -20px -324px;
+}
+
+.manage-ul .css img {
+  background-position: -20px -288px;
+}
+
+.manage-ul .repository img {
+  background: url('/ui/bar_items/icons/16x16/repository.png') top left no-repeat;
+}
+
+.manage-ul .add img {
+  background-position: -20px 0;
+}
+
+.manage-ul .order img {
+  background-position: -20px -504px;
+}
+
+.manage-ul .order.disable img {
+  background-position: -20px -540px;
+}
+
+
+/**************************************************************************
+ * SPRITES
+ **************************************************************************/
+/*
+ * space before: 20px
+ * icon width: 16px
+ * space after: 20px
+ * vertical space: 20px
+ */
+/* buttons */
+.button-add,
+.button-copy,
+.button-paste,
+.button-rename,
+.button-delete,
+.button-cut,
+.button-retire,
+.button-publish,
+.button-ok
+{
+  background-image: url(/ui/common/icons/16x16/sprites.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  /* background position and padding */
+  padding-bottom: 5px;
+  padding-left: 24px;
+  padding-right: 5px;
+  padding-top: 5px;
+}
+
+/* buttons */
+.button-add { background-position: -15px 5px; }
+.button-copy { background-position: -15px -31px; }
+.button-paste { background-position: -15px -67px; }
+.button-rename { background-position: -15px -103px; }
+.button-delete { background-position: -15px -139px; }
+.button-cut { background-position: -15px -175px; }
+.button-retire { background-position: -15px -211px; }
+.button-publish { background-position: -15px -247px; }
+.button-ok { background-position: -15px -571px; }
+
+/* browse list sort up/down */
+#browse-list th a.sort-up,
+#browse-list th a.sort-up-active,
+#browse-list th a.sort-down,
+#browse-list th a.sort-down-active {
+  background: transparent url(/ui/common/images/sprite-browse-list-sort.png) no-repeat;
+}
+
+#browse-list th a.sort-down { background-position: -10px -10px; }
+#browse-list th a.sort-down-active { background-position: -10px -29px; }
+#browse-list th a.sort-up { background-position: -10px -48px; }
+#browse-list th a.sort-up-active { background-position: -10px -67px; }
+
+/* Admin Bar */
+.adminbar16 {
+  background: transparent url(/ui/common/icons/16x16/sprite-admin-bar.png) no-repeat;
+  display: block;
+  float: left;
+  height: 16px;
+  width: 16px;
+}
+
+.house-go { background-position: -2px -2px; }
+.page-white-add { background-position: -2px -20px; }
+.cog { background-position: -2px -38px; }
+.folder-explore { background-position: -2px -56px; }
+.folder-back { background-position: -2px -74px; }
+
+/**************************************************************************
+ * Bar items
+ * ***********************************************************************/
+.contentbar-box-section-news .item {
+  border-bottom: 1px dotted #999;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.contentbar-box-section-news .item .pub-datetime {
+  float: left;
+  padding-right: 8px;
+  font-family: Tahoma,sans-serif;
+  font-style: italic;
+}
+
+.contentbar-box-section-news .item .tag {
+  float: left;
+}
+
+.contentbar-box-section-news .item h3.title {
+  clear: both;
+  border: none;
+  margin-right: 0;
+}
+
+.contentbar-box-section-news .item h3.title a {
+  text-decoration: none;
+}
+
+.contentbar-box-section-news .item .image-link {
+  float: left;
+  padding: 0 5px 5px 0;
+}
+
+.contentbar-box-section-news .item .more {
+  float: right;
+  margin-top: 10px;
+}
+
+/* feed box */
+.feed-view.feed-box.v1 .item,
+.feed-view.feed-box.v2 .item,
+.feed-view.feed-box.v3 .item {
+  border-bottom: 1px dotted #999;
+  padding-bottom: 10px;
+}
+.feed-view.feed-box.v2 .item:first-child {
+  padding-top: 0;
+}
+.feed-view.feed-box.v2 .item:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+.feed-view.feed-box.v2 .image-link {
+  float: left;
+  padding-bottom: 5px;
+  padding-right: 10px;
+}
+.feed-view.feed-box.v2 .pub-datetime {
+    margin: 5px 0;
+}
+.feed-view.feed-box.v3 .item .title {
+  font-size: 1.1em;
+  border-bottom: 0;
+}
+
+/**************************************************************************
+ * External Edit
+ * ***********************************************************************/
+#external-edit fieldset legend {
+  font-size: 1.5em;
+}
+
+#external-edit .unix, #external-edit .windows {
+  height: auto;
+  min-height: inherit;
+  width: auto;
+  float: none;
+}
+
+
+/**************************************************************************
+ * Comments
+ * ***********************************************************************/
+.comment-header {
+  background-color: #ddddff;
+  font-weight: bold;
+}
+
+.comment-body {
+  font-family: "Arial", "DejaVu Sans", sans-serif;
+  font-size: 1.2em;
+}

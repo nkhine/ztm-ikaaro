@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<stl:block xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:stl="http://www.hforge.org/xml-namespaces/stl">
+  <h3 stl:if="title" class="title">${title}</h3>
+  <div class="content" stl:if="items">
+    <ul>
+      <li stl:repeat="item items" class="${repeat/item/even} ${item/class}">
+        <a href="${item/path}" title="${item/title}">${item/title}</a>
+        <ul stl:if="item/sub_items">
+          <li stl:repeat="subitem item/sub_items" class="${repeat/subitem/even} ${subitem/class}">
+            <a href="${subitem/path}" title="${subitem/title}">${subitem/title}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <a class="admin-link" stl:if="admin_link" href="${admin_link/href}"
+       title="${admin_link/title}">${admin_link/title}</a>
+  </div>
+
+  <div class="content" stl:if="not items">
+    <stl:block stl:if="not hide_if_not_enough_items">
+      No ordered webpages/subsections to show
+    </stl:block>
+    <stl:block stl:if="hide_if_not_enough_items">
+      There is not enough ordered webpages/subsections to display the box.<br/>
+      Minimum limit: <i>${limit}</i>
+    </stl:block>
+    <a class="admin-link" stl:if="admin_link" href="${admin_link/href}"
+       title="${admin_link/title}">${admin_link/title}</a>
+  </div>
+
+</stl:block>
