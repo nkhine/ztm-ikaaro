@@ -459,7 +459,12 @@ class NeutralSkin(Skin):
 
     add_common_nav_css = True
 
+#
+class ZeitgeistSkin(Skin):
 
+    title = MSG(u'Zeitgeist Skin')
+
+    add_common_nav_css = True
 
 class AdminPopupSkin(BaseSkin):
 
@@ -493,6 +498,9 @@ register_skin('admin-popup', AdminPopupSkin(get_abspath('ui/admin-popup')))
 
 # New skins
 register_skin('k2', Skin(get_abspath('ui/k2')))
+
+# Custom Zeitgeist Skin
+register_skin('ztm', ZeitgeistSkin(get_abspath('ui/ztm')))
 
 # Old skins
 register_skin('neutral', NeutralSkin(get_abspath('ui/neutral')))
