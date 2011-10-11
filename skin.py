@@ -464,8 +464,6 @@ class ZeitgeistSkin(Skin):
 
     title = MSG(u'Zeitgeist Skin')
 
-    add_common_nav_css = True
-
 class AdminPopupSkin(BaseSkin):
 
     def get_styles(self, context):

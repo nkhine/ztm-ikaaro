@@ -1,0 +1,15 @@
+1/. wire frame for main portal and chapter sites
+2/. questionare module - MCQ, MAQ and Free text input, so that it can be also used as a Poll
+3/. user profile, allow sites to control what data they want to store
+4/. video room - integrate nodejs using the python library to create a chat/video room see http://driv.in
+5/. enhance the existing style, perhaps use YUI2 grids, this way we can have a template that can be control by each individual users' preferences
+6/. right-to-left template for: 
+	Arabic alphabet - used for Arabic, Persian, Urdu and many other languages.
+	Hebrew alphabet - used for Hebrew, Yiddish and some other Jewish languages.
+	Syriac alphabet - used for varieties of the Syriac language.
+	Thaana - used for Dhivehi.
+	N'Ko script - used for several languages of Africa.
+8/. up-to-down template for Mandarin Cantonese Taiwanese Shanghainese Japanese languages
+9/. mobile
+10/. create import scripts for different forums, wikis and documents from drupal, joomla, phpboard, wordpress etc...
+	link these to the appropriate module, so if we are on the Forum, the user should have a tab 'Import'
