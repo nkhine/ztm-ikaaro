@@ -24,56 +24,140 @@
   <link rel="shortcut icon" href="${favicon_href}" type="${favicon_type}" />
 </head>
 <body class="${body_css} ${lang}">
-  ${admin_bar}
-  <div id="page" class="${page_css_class}">
-    <div id="header">
-      <div id="nav" stl:if="display_menu">${nav}</div>
-      <div class="login">
-        <stl:block stl:if="not user">
-          <a href="${login}" id="top-menu-login" title="Log in">Log in</a>
-        </stl:block>
-        <stl:block stl:if="user">
-          <a href="${user/home}" title="${user/title}">${user/title}</a>
-          <span>|</span>
-          <a href="${logout}" id="top-menu-logout" title="Log out">Log out</a>
-        </stl:block>
-      </div>
-      <table cellpadding="0" cellspacing="0" class="header-toolbar">
-        <tr>
-          <td class="recherche">
-            <form action="/;site_search" method="get">
-              <input name="search_text" type="text" value="${text}" size="15"/>
-              <button class="button-search" type="submit">
-                <span>Search</span>
-              </button>
-            </form>
-          </td>
-          <td class="languages">${languages}</td>
-        </tr>
-      </table>
-      <div class="title">
-        <a href="/" title="${banner/description}">
-          <img stl:if="banner/path" alt="${banner/description}" src="${banner/path}/;download"/>
-          <stl:inline stl:if="not banner/path">${banner/title}</stl:inline>
-        </a>
-      </div>
-    </div>
-    <div id="content" class="${resource_class}">
-      ${location}
-      ${message}
-      <div stl:if="sidebar" id="contentbar">${body}</div>
-      <div stl:if="not sidebar" id="contentbar" class="large">${body}</div>
-      <div id="sidebar" stl:if="sidebar">
-        <stl:block stl:repeat="menu context_menus">
-          ${menu}<br/>
-        </stl:block>
-        ${sidebar_view}
-      </div>
-      <div class="clear" />
-    </div>
-    ${turning_footer}
-    <div id="footer" stl:if="footer">${footer}</div>
-  </div>
-  ${custom_data}
+  <!-- Add YUI2 grids-->
+        <div id="doc3" class="yui-t1">
+            <div id="hd">
+              ${admin_bar}
+              <div class="yui-gf">
+                <div class="yui-u first">
+                <h1 title="${title}">
+                  <a href="/" title="${title}">${title}</a>
+                </h1>
+                </div>
+                <div class="yui-u">
+                  <div id="nav">
+                  <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/;news">News</a></li>
+                    <li><a href="/;actions">Actions</a></li>
+                    <li><a href="/;forum">Forum</a></li>
+                    <li><a href="/;more">More&nbsp;»</a></li>
+                  </ul>
+                  </div><!-- /nav -->
+                </div><!-- /yui-u -->
+              </div><!-- /yui-g first -->
+              </div><!-- /hd -->
+                <div class="yui-gd">
+                    <div class="yui-u first">
+                        first
+                    </div><!-- /yui-u first-->
+                    <div class="yui-u profile">
+                        <ul>
+                          <stl:block stl:if="not user">
+                            <li><a href="${login}">Log in</a></li>
+                          </stl:block>
+                          <stl:block stl:if="user">
+                            <li><span></span></li>
+                            <li><a href="${user/home}">My profile</a></li>
+                            <li><a href="/;logout">Log out</a></li>
+                          </stl:block>
+                          <li><a href="/;contact">Help</a></li>
+                          <li><a href="/;contact">Contact</a></li>
+                          <li>
+                             <form action="/;site_search" method="get">
+                               <input name="search_text" type="text" value="" size="15"/>
+                            </form>
+                            </li>
+                          <li class="last-child"><a href="/;search"><img class="adminbar16 cog" title="Control panel" src="/ui/common/images/1x1.gif" /></a></li>
+                        </ul>
+                    </div><!-- /yui-u-->
+                </div><!-- /yui-gc-->
+            <div id="bd">
+                <div class="yui-b">
+                  Menu on the left
+                  <!--  
+                    <div stl:repeat="menu left_menus">
+                            <stl:block if="level1">
+                                <ul stl:repeat="option level1">
+                                    <li>
+                                        <a href="/;search?level1=${option/id}">
+                                        ${option/title}</a>
+                                    </li>
+                                </ul>
+                            </stl:block>   
+                            <stl:block if="not level1">
+                                <label>${menu/title}</label>
+                                   ${menu/content}
+                            </stl:block>   
+                    </div>
+                  -->
+                </div><!-- yui-b -->
+                <div id="yui-main">
+                    <div class="yui-b">
+                      <!--
+                        old template
+                        <div id="content" class="${resource_class}">
+                          ${location}
+                          ${message}
+                          <div stl:if="sidebar" id="contentbar">${body}</div>
+                          <div stl:if="not sidebar" id="contentbar" class="large">${body}</div>
+                          <div id="sidebar" stl:if="sidebar">
+                            <stl:block stl:repeat="menu context_menus">
+                              ${menu}<br/>
+                            </stl:block>
+                            ${sidebar_view}
+                          </div>
+                          <div class="clear" />
+                        </div>
+                      -->
+                        <div id="location"><!-- breadcrumbs -->
+                            <label>${location}</label>
+                        </div><!-- /breadcrumbs -->
+                        <div id="message" stl:if="message">${message}</div>
+                        <div class="yui-gc">
+                            <div class="yui-u first">
+                                <div stl:if="sidebar" id="contentbar1">${body}</div>
+                                <div stl:if="not sidebar" id="contentbar" class="large">${body}</div>
+                            </div><!-- /yui-u first-->
+                            <div class="yui-u">
+                                <div stl:if="sidebar" class="ui-corner-all">
+                                  <stl:block stl:repeat="menu context_menus">
+                                    ${menu}<br/>
+                                  </stl:block>
+                                  ${sidebar_view}
+                                </div>
+                            </div><!-- /yui-u-->
+                        </div><!-- /yui-gc-->
+                    </div><!-- /yui-b -->
+                 </div><!-- /yui-main -->   
+            </div><!-- /bd -->
+            <div id="footer">
+                <div class="horizontal-up" />
+                ${turning_footer}
+                <ul>
+                    <li class="space">
+                      <h1 title="${title}">
+                        <a href="/" title="${title}">
+                        bettering the future since 2008</a>
+                      </h1>
+                    </li>
+                    <li><a href="/;about">About</a></li>
+                    <li><a href="/;more">More</a></li>
+                     <stl:block stl:if="not user">
+                        <li><a href="/;login_form">(not logged in)</a></li>
+                      </stl:block>
+                      <stl:block stl:if="user">
+                          <li><a href="${user/home}">
+                          ${user/title}</a></li>
+                      </stl:block>
+                </ul>
+            </div><!-- /ft -->
+        </div><!-- /doc -->
+  <!-- languages selector 
+      ${languages} -->
+  <!-- /languages selector -->
+      ${custom_data}
+      ${search}
+  <!-- End YUI2 grids-->
 </body>
 </html>

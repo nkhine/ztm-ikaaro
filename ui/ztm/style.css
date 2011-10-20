@@ -1,7 +1,38 @@
+/*Norman Khine - 2011 - Zeitgeist Movement */
+
 body {
   background: #eee;
   font-size: 62.5%;
   font-family: "Verdana", "Bitstream Vera Sans", "DejaVu Sans", sans-serif;
+}
+
+h1, h2 {
+font-size:116%;
+font-weight:bold;
+}
+
+/**************************************************************************
+ * YUI overwrites 
+ **************************************************************************/
+.yui-dt {
+  float: left;
+  margin: 5px 10px;
+}
+
+.yui-dt-title {
+  padding-left: 5px;
+  font-weight: bold;
+  font-size: 85%
+}
+
+.yui-dt-credit {
+  padding-left: 8px;
+  font-style: italic;
+  font-size: 77%
+}
+
+.yui-gc .yui-u textarea {
+width: 98%;
 }
 
 /**************************************************************************
@@ -49,11 +80,19 @@ body {
   -moz-border-radius: 0 5px 0 0;
   -webkit-border-radius: 0 5px 0 0;
   border-radius: 0 5px 0 0;
-
   position: relative;
   height: 200px;
   background: #444;
 }
+#hd{ background:#db008b;-moz-border-radius-bottomright: 5px; -webkit-border-bottom-right-radius: 5px; }
+
+#hd h1 {
+    background:url(/ui/ztm/resources/lmz-logo-160x62.png) top left no-repeat;
+    width:160px;
+    height:62px;
+    }
+#hd h1 a{position:relative;top:-15px; font-size: 208%;color:#511f88; width:400px;line-height:72px;display:block;text-indent:80px;text-decoration:none;border:none;background:none;}
+#hd h1 a:hover {background:none;border:none;text-decoration: none;}  
 
 #header .login {
   padding: 4px;
@@ -126,41 +165,16 @@ body {
   visibility: hidden;
 }
 
-#languages a,
-#languages a:link {
-  text-transform: uppercase;
-  margin: 0;
-  padding: 0 5px 0 2px; /* There is something strange should be {0 5px} */
-  border-right: 1px solid #bbb;
-}
-
-#languages a.first {
-  padding-left: 0;
-}
-
-#languages a.last {
-  margin-right: 0;
-  border-right: 0;
-  padding-right: 0;
-}
-
-#header #languages a.selected {
-  text-decoration: underline;
-}
-
-
 /**************************************************************************
  * MENU
  * ***********************************************************************/
 #nav {
   font-size: 1.1em;
+  position:absolute;right:15px;
 }
 
 #nav ul {
-  bottom: 0;
   padding-left: 0;
-  margin: 0 20px;
-  position: absolute;
   white-space: nowrap;
 }
 
@@ -170,13 +184,12 @@ body {
   list-style-position: outside;
   list-style-type: none;
   margin-right: 4px;
-  margin-top: 4px;
 }
 
 #nav ul li a {
-  -moz-border-radius: 4px 4px 0 0;
-  -webkit-border-radius: 4px 4px 0 0;
-  border-radius: 4px 4px 0 0;
+  -moz-border-radius: 0 0 4px 4px;
+  -webkit-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
 
   display: block;
   font-size: 1em;
@@ -198,6 +211,17 @@ body {
 }
 
 /**************************************************************************
+ * Bar 
+ **************************************************************************/
+
+#hd #bar{position:absolute;top:62px;right:15px;text-align:right;}
+#hd #bar ul{float:right;list-style:none;margin:0;padding:0;}
+#hd #bar li{float:left;margin:0;padding:0;}
+#hd #bar a{display:block;color:#333;text-decoration:none;border:1px solid #9B8748;border-top:none;background:#F9E9A9;margin:0 1px 0 0;padding:1px 8px;-moz-border-radius-bottomleft: 5px; -webkit-border-bottom-left-radius: 5px;-moz-border-radius-bottomright: 5px; -webkit-border-bottom-right-radius: 5px;}
+#hd #bar a:hover {color:#333;padding-bottom:1px;background:#fff;}
+
+
+/**************************************************************************
  * CONTENT
  * ***********************************************************************/
 /* Minimal height */
@@ -210,11 +234,6 @@ body {
 /* IE 6 & <*/
 * html #content{
   height: 400px;
-}
-
-#content {
-  font-size: 1.15em;
-  padding: 10px 15px 30px;
 }
 
 #content a,
@@ -325,22 +344,13 @@ fieldset legend{
 /**************************************************************************
  * CONTENTBAR
  * ***********************************************************************/
-#contentbar {
-  width: 640px;
-  float: left;
-  overflow: hidden;
-  padding-bottom: 0.6em;
-}
-#contentbar.large {
-  width: 930px;
-}
+
 
 
 /**************************************************************************
  * SIDEBAR
  * ***********************************************************************/
 #sidebar {
-  width: 270px;
   float: right;
   padding-top: 0;
   overflow-x: hidden;
@@ -355,7 +365,7 @@ fieldset legend{
   margin-bottom: 10px;
   padding: 5px 10px;
   /* Fix IEx */
-  width: 248px; /* 270 - 1 (border-left) - 10 (padding-left) - 1 (border-right) - 10 (padding-right) */
+  width: 180px; /* 270 - 1 (border-left) - 10 (padding-left) - 1 (border-right) - 10 (padding-right) */
 }
 
 #contentbar .sidebar-box {
@@ -389,7 +399,6 @@ fieldset legend{
 }
 
 #sidebar .content {
-  width: 248px;
   overflow: hidden;
 }
 
@@ -525,21 +534,29 @@ fieldset legend{
 /**************************************************************************
  * FOOTER
  * ***********************************************************************/
-#footer {
-  -moz-border-radius: 0 0 5px 5px;
-  -webkit-border-radius: 0 0 5px 5px;
+#footer { 
+    -moz-border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+    font-size: 85%;
+    margin-top: 15px;
+} 
+#footer h1 {position:relative;top:-25px;background:url(/ui/ztm/resources/lmz-logo-60.png) top left no-repeat;width:60px;height:60px; }
+#footer h1 a { width:60px;line-height:60px;display:block;text-indent:-5000px;text-decoration:none;border:none;background:none;}
+#footer ul {list-style:none;margin:0;padding:0;}
+#footer li {float:left;margin-top:5px;padding:0;}
+#footer a {margin-left: 1em; margin-right: 1em; margin-right: 1em;text-decoration: none;}
+#footer a:hover {text-decoration: underline;}
 
-  border-radius: 0 0 5px 5px;
-  background: #444;
-  padding: 10px 5px;
-}
+.space { width:65px; }
 
-#footer p {
-  margin: 0;
-}
-
-#footer p, #footer a {
-  color: #fff;
+.horizontal-up  {
+  width: 100%;
+  border-top: 1px solid gray;
+  padding: 5px 0;
+  float: middle;
+  min-height: 5px;
+  background: url('/ui/common/images/admin-background-up.png') top left repeat-x #b8b8b8;
 }
 
 /**************************************************************************
@@ -686,4 +703,87 @@ body.popup p.tabme a.selected {
 .details-view .item .more {
   float: right;
   margin-top: 10px;
+}
+
+
+.profile {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  padding: 5px 0;
+  float: right;
+  min-height: 25px;
+  
+}
+
+.profile table {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.profile table td {
+  padding-right: 40px;
+  vertical-align: top;
+}
+
+.profile table td:last-child {
+  padding-right: 0;
+}
+
+.profile ul {
+  margin: 0;
+  padding: 0;
+}
+
+.profile ul li {
+  display: inline;
+}
+
+.profile ul li input,
+.profile ul li a,
+.profile ul li span {
+  -moz-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+  -webkit-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+  background-color: #FFF;
+  border-left: 1px solid #333333;
+  border: 1px solid #333;
+  border-right: 0;
+  box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px;
+  color: #000;
+  float: left;
+  font-size: 10px;
+  height: 15px;
+  line-height: 15px;
+  margin: 0px;
+  padding: 3px 10px;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 2px;
+}
+
+.profile ul li span {
+   -moz-border-radius: 5px 0 0 5px;
+  -webkit-border-radius: 5px 0 0 5px;
+  background-color: #333;
+  border-radius: 5px 0 0 5px;
+  color: #FFF;
+}
+
+
+.profile ul li a:hover {
+  background-color: #D8D8D8;
+  color: #000;
+}
+
+.profile ul li a.active {
+  background-color: #D8D8D8;
+  font-weight: bold;
+  color: #000;
+}
+
+.profile ul li:last-child a {
+  border-right: 1px solid #333;
+  border-radius: 0 5px 5px 0;
+  -moz-border-radius: 0 5px 5px 0;
+  -webkit-border-radius: 0 5px 5px 0;
 }

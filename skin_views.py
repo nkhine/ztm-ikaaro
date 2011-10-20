@@ -341,3 +341,20 @@ class LanguagesTemplate(BaseLanguagesTemplate):
                 'selected': selected,
                 'class': css_class})
         return languages
+
+class SearchTemplate(CMSTemplate):
+    
+    template = '/ui/common/search.xml'
+    
+    #@thingy_lazy_property
+    #def search(self):
+    #    context = self.context
+    #    print "are we here"
+    #    # The Search Form
+    #    if self.template is None:
+    #        namespace['text'] = None
+    #    else:
+    #        text = context.get_form_value('search_text', type=Unicode)
+    #        namespace['text'] = text.strip()
+    #
+    #    return search

@@ -45,6 +45,7 @@ from bar import Section
 from bar import SideBarAware, SideBar_View
 from news import NewsFolder, NewsItem
 from skin_views import AdminBarTemplate, LocationTemplate, LanguagesTemplate
+from skin_views import SearchTemplate
 from utils import get_admin_bar, is_navigation_mode
 from webpage import WebPage
 from ws_neutral import NeutralWS
@@ -104,6 +105,7 @@ class Skin(BaseSkin):
 
     location_template = LocationTemplate
     languages_template = LanguagesTemplate
+    search_template = SearchTemplate
 
     template_title_root = MSG(u"{root_title}")
     template_title_base = MSG(u"{root_title} - {here_title}")
@@ -278,7 +280,6 @@ class Skin(BaseSkin):
 
     def build_namespace(self, context):
         namespace = BaseSkin.build_namespace(self, context)
-
         here = context.resource
         here_ac = here.get_access_control()
         site_root = context.site_root
@@ -405,6 +406,10 @@ class Skin(BaseSkin):
             namespace['admin_bar'] = AdminBarTemplate(context=context)
         else:
             namespace['admin_bar'] = None
+            
+        # Search Template
+        namespace['search'] = SearchTemplate(context=context)
+
         return namespace
 
 
@@ -461,8 +466,37 @@ class NeutralSkin(Skin):
 
 #
 class ZeitgeistSkin(Skin):
-
+    """
+        Zeigeist Skin as defined on wireframe diagram
+        http://XXX/wireframe.png
+    """
     title = MSG(u'Zeitgeist Skin')
+    
+    def get_styles(self, context):
+        styles = Skin.get_styles(self, context)
+        # styles returned as a python list
+        #'/ui/bo.css', 
+        #'/ui/common/style.css', 
+        #'/ui/js_calendar/calendar-aruni.css', 
+        #'/ui/ztm/style.css', 
+        #'/theme/style/;download', 
+        #'/ui/common/js/jquery.multiselect2side/style.css', 
+        #'/ui/common/js/fancybox/jquery.fancybox-1.3.1.css', 
+        #'/ui/common/bo.css'
+        # insert the YUI reset-fonts-grids at position 0
+        styles.insert(0, '/ui/common/yui/reset-fonts-grids/reset-fonts-grids.css')
+        styles.remove('/ui/bo.css')
+        styles.remove('/ui/common/style.css') # this adds all the images
+        #styles.remove('/ui/ztm/style.css')
+        #styles.remove('/ui/common/bo.css') #this adds the top admin bar
+        styles.append('/ui/common/flags-sprite.css')
+        
+        
+        
+        print styles
+        
+        return styles
+        
 
 class AdminPopupSkin(BaseSkin):
 
