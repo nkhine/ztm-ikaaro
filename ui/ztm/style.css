@@ -109,12 +109,12 @@ width: 98%;
   font-size: 108%;
 }
 
-#menu ul {
+#menu ol {
   padding-left: 0;
   white-space: nowrap;
 }
 
-#menu ul li {
+#menu ol li {
   float: right;
   list-style-image: none;
   list-style-position: outside;
@@ -122,7 +122,7 @@ width: 98%;
   margin-right: 4px;
 }
 
-#menu ul li a {
+#menu ol li a {
   -moz-border-radius: 0 0 4px 4px;
   -webkit-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
@@ -135,12 +135,12 @@ width: 98%;
   color: #fff;
 }
 
-#menu ul li a:hover {
+#menu ol li a:hover {
   background: #ccc;
   color: #000;
 }
 
-#menu ul li.in-path a {
+#menu ol li.in-path a {
   background: #fff;
   color: #333;
 }
@@ -149,11 +149,11 @@ width: 98%;
  * Bar 
  **************************************************************************/
 
-#hd #bar{position:absolute;top:62px;right:15px;text-align:right;}
-#hd #bar ul{float:right;list-style:none;margin:0;padding:0;}
-#hd #bar li{float:left;margin:0;padding:0;}
-#hd #bar a{display:block;color:#333;text-decoration:none;border:1px solid #9B8748;border-top:none;background:#F9E9A9;margin:0 1px 0 0;padding:1px 8px;-moz-border-radius-bottomleft: 5px; -webkit-border-bottom-left-radius: 5px;-moz-border-radius-bottomright: 5px; -webkit-border-bottom-right-radius: 5px;}
-#hd #bar a:hover {color:#333;padding-bottom:1px;background:#fff;}
+#bar{position:relative;right:15px;}
+#bar ul{float:right;list-style:none;margin:0;padding:0;}
+#bar li{float:left;margin:0;padding:0;}
+#bar a{display:block;color:#333;text-decoration:none;border:1px solid #9B8748;border-top:none;background:#F9E9A9;margin:0 1px 0 0;padding:1px 8px;-moz-border-radius-bottomleft: 5px; -webkit-border-bottom-left-radius: 5px;-moz-border-radius-bottomright: 5px; -webkit-border-bottom-right-radius: 5px;}
+#bar a:hover {color:#333;padding-bottom:1px;background:#fff;}
 
 
 /**************************************************************************
