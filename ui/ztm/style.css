@@ -76,121 +76,56 @@ width: 98%;
 /**************************************************************************
  * HEADER
  * ***********************************************************************/
-#header {
-  -moz-border-radius: 0 5px 0 0;
-  -webkit-border-radius: 0 5px 0 0;
-  border-radius: 0 5px 0 0;
-  position: relative;
-  height: 200px;
-  background: #444;
-}
-#hd{ background:#db008b;-moz-border-radius-bottomright: 5px; -webkit-border-bottom-right-radius: 5px; }
+ #hd{ background:#db008b;-moz-border-radius-bottomright: 5px; -webkit-border-bottom-right-radius: 5px; }
 
-#hd h1 {
-    background:url(/ui/ztm/resources/lmz-logo-160x62.png) top left no-repeat;
-    width:160px;
-    height:62px;
-    }
-#hd h1 a{position:relative;top:-15px; font-size: 208%;color:#511f88; width:400px;line-height:72px;display:block;text-indent:80px;text-decoration:none;border:none;background:none;}
-#hd h1 a:hover {background:none;border:none;text-decoration: none;}  
+/**************************************************************************
+* LOGO
+* ***********************************************************************/
+#logo h1 {
+     background:url(/ui/ztm/resources/lmz-logo-160x62.png) top left no-repeat;
+     width:160px;
+     height:62px;
+     }
 
-#header .login {
-  padding: 4px;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-#header .login a,
-#header .login span {
-  color: #fff;
-}
-
-#header .title {
-  text-align: center;
-  padding-top: 75px;
-}
-
-#header .title a {
-  color: #fff;
-  font-size: 2.6em;
-  text-decoration: none;
-}
-
-/* header toolbar */
-#header .header-toolbar {
-  -moz-border-radius: 0 5px 0 5px;
-  -webkit-border-radius: 0 5px 0 5px;
-  border-radius: 0 5px 0 5px;
-
-  background: #333;
-  color: #000;
-  font-size: 1.1em;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-#header .header-toolbar td {
-  padding: 8px 4px;
-}
-
-/* toolbar link */
-#header .header-toolbar a,
-#header .header-toolbar a:link {
-  color: #fff;
-  text-decoration: none;
-}
-#header .header-toolbar a:hover,
-#header .header-toolbar a:visited {
-  color: #ddd;
-}
-
-#header .header-toolbar input,
-#header .header-toolbar button {
-  border: 1px solid #bbb;
-  float: left;
-  height: 16px;
-}
-
-#header .header-toolbar .button-search {
-  background-position: 50% 50%;
-  width: 30px; /* IEx left-padding:24px + right-padding: 6px */
-  height: 22px;
-  margin: 0 0 0 5px;
-  padding: 1px 6px 1px 16px;
-}
-
-#header .header-toolbar button span {
-  visibility: hidden;
-}
+#logo h1 a{
+    position:relative;
+    top:-15px; 
+    font-size:208%;
+    color:#511f88; 
+    white-space: nowrap;
+    line-height:72px;
+    display:block;
+    text-indent:80px;
+    text-decoration:none;
+    border:none;
+    background:none;}
+    
+#logo h1 a:hover{background:none;border:none;text-decoration: none;}
 
 /**************************************************************************
  * MENU
  * ***********************************************************************/
-#nav {
-  font-size: 1.1em;
-  position:absolute;right:15px;
+#menu {
+  font-size: 108%;
 }
 
-#nav ul {
+#menu ul {
   padding-left: 0;
   white-space: nowrap;
 }
 
-#nav ul li {
-  float: left;
+#menu ul li {
+  float: right;
   list-style-image: none;
   list-style-position: outside;
   list-style-type: none;
   margin-right: 4px;
 }
 
-#nav ul li a {
+#menu ul li a {
   -moz-border-radius: 0 0 4px 4px;
   -webkit-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
-
   display: block;
   font-size: 1em;
   padding: 5px 15px;
@@ -200,12 +135,12 @@ width: 98%;
   color: #fff;
 }
 
-#nav ul li a:hover {
+#menu ul li a:hover {
   background: #ccc;
   color: #000;
 }
 
-#nav ul li.in-path a {
+#menu ul li.in-path a {
   background: #fff;
   color: #333;
 }

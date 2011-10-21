@@ -484,9 +484,10 @@ class ZeitgeistSkin(Skin):
         #'/ui/common/js/fancybox/jquery.fancybox-1.3.1.css', 
         #'/ui/common/bo.css'
         # insert the YUI reset-fonts-grids at position 0
-        styles.insert(0, '/ui/common/yui/reset-fonts-grids/reset-fonts-grids.css')
+        styles.insert(0, '/ui/common/yui/cssreset/reset-min.css')
+        styles.insert(1, '/ui/common/yui/cssgrids/grids-min.css')
         styles.remove('/ui/bo.css')
-        styles.remove('/ui/common/style.css') # this adds all the images
+        #styles.remove('/ui/common/style.css') # this adds all the images
         #styles.remove('/ui/ztm/style.css')
         #styles.remove('/ui/common/bo.css') #this adds the top admin bar
         styles.append('/ui/common/flags-sprite.css')

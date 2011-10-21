@@ -24,30 +24,35 @@
   <link rel="shortcut icon" href="${favicon_href}" type="${favicon_type}" />
 </head>
 <body class="${body_css} ${lang}">
-  <!-- Add YUI2 grids-->
-        <div id="doc3" class="yui-t1">
-            <div id="hd">
-              ${admin_bar}
-              <div class="yui-gf">
-                <div class="yui-u first">
-                <h1 title="${title}">
-                  <a href="/" title="${title}">${title}</a>
-                </h1>
-                </div>
-                <div class="yui-u">
-                  <div id="nav">
-                  <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/;news">News</a></li>
-                    <li><a href="/;actions">Actions</a></li>
-                    <li><a href="/;forum">Forum</a></li>
-                    <li><a href="/;more">More&nbsp;»</a></li>
-                  </ul>
-                  </div><!-- /nav -->
-                </div><!-- /yui-u -->
-              </div><!-- /yui-g first -->
-              </div><!-- /hd -->
-                <div class="yui-gd">
+  <!-- Add YUI3 grids-->
+            <div class="yui3-g" id="hd">
+                <div class="yui3-u-1">
+                  ${admin_bar}
+                </div> <!-- /class="yui3-u-1" -->
+                <div class="yui3-u-1-4" id="logo">
+                  <h1 title="${title}">
+                    <a href="/" title="${title}">${title}</a>
+                  </h1>
+                </div> <!-- /class="yui3-u-1-4" id="logo"-->
+                <div class="yui3-u-3-4">
+                  <div id="menu">
+                    <ul>
+                      <li><a href="/">Home</a></li>
+                      <li><a href="/;news">News</a></li>
+                      <li><a href="/;actions">Actions</a></li>
+                      <li><a href="/;forum">Forum</a></li>
+                      <li><a href="/;more">More&nbsp;»</a></li>
+                    </ul>
+                  </div><!-- /id="menu" -->
+                  <div id="language">
+                    ${languages}
+                  </div><!-- /id="language" -->
+                </div><!-- /class="yui3-u-3-4" -->
+              </div><!-- /class="yui3-g" id="hd" -->
+              
+              <!-- Bread crumbs and Activist's profile menu -->
+              
+              <div class="yui-gd">
                     <div class="yui-u first">
                         first
                     </div><!-- /yui-u first-->
@@ -152,7 +157,6 @@
                       </stl:block>
                 </ul>
             </div><!-- /ft -->
-        </div><!-- /doc -->
   <!-- languages selector 
       ${languages} -->
   <!-- /languages selector -->
